@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		593AD2922943DBC0006595CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593AD2912943DBC0006595CC /* AppDelegate.swift */; };
 		593AD2942943DBC0006595CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593AD2932943DBC0006595CC /* SceneDelegate.swift */; };
-		593AD2962943DBC0006595CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593AD2952943DBC0006595CC /* ViewController.swift */; };
 		593AD2992943DBC0006595CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 593AD2972943DBC0006595CC /* Main.storyboard */; };
 		593AD29C2943DBC0006595CC /* MediaManager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 593AD29A2943DBC0006595CC /* MediaManager.xcdatamodeld */; };
 		593AD29E2943DBC1006595CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 593AD29D2943DBC1006595CC /* Assets.xcassets */; };
 		593AD2A12943DBC1006595CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 593AD29F2943DBC1006595CC /* LaunchScreen.storyboard */; };
+		593AD2AF2943E06C006595CC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593AD2AE2943E06C006595CC /* CoreDataStack.swift */; };
+		593AD2B12943E0C8006595CC /* MediaItem+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593AD2B02943E0C8006595CC /* MediaItem+Convenience.swift */; };
+		593AD2B32943E24D006595CC /* MediaItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593AD2B22943E24D006595CC /* MediaItemController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		593AD28E2943DBC0006595CC /* MediaManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediaManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		593AD2912943DBC0006595CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		593AD2932943DBC0006595CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		593AD2952943DBC0006595CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		593AD2982943DBC0006595CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		593AD29B2943DBC0006595CC /* MediaManager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MediaManager.xcdatamodel; sourceTree = "<group>"; };
 		593AD29D2943DBC1006595CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		593AD2A02943DBC1006595CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		593AD2A22943DBC1006595CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		593AD2AE2943E06C006595CC /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		593AD2B02943E0C8006595CC /* MediaItem+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MediaItem+Convenience.swift"; sourceTree = "<group>"; };
+		593AD2B22943E24D006595CC /* MediaItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItemController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +62,58 @@
 		593AD2902943DBC0006595CC /* MediaManager */ = {
 			isa = PBXGroup;
 			children = (
+				593AD2AA2943DBEB006595CC /* Storyboards */,
+				593AD2AC2943DC0B006595CC /* Model Controllers */,
+				593AD2AB2943DBF3006595CC /* View Controllers */,
+				593AD2A82943DBCA006595CC /* Models */,
+				593AD2A92943DBDF006595CC /* Resources */,
+			);
+			path = MediaManager;
+			sourceTree = "<group>";
+		};
+		593AD2A82943DBCA006595CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				593AD29A2943DBC0006595CC /* MediaManager.xcdatamodeld */,
+				593AD2AE2943E06C006595CC /* CoreDataStack.swift */,
+				593AD2B02943E0C8006595CC /* MediaItem+Convenience.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		593AD2A92943DBDF006595CC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				593AD2912943DBC0006595CC /* AppDelegate.swift */,
 				593AD2932943DBC0006595CC /* SceneDelegate.swift */,
-				593AD2952943DBC0006595CC /* ViewController.swift */,
-				593AD2972943DBC0006595CC /* Main.storyboard */,
 				593AD29D2943DBC1006595CC /* Assets.xcassets */,
 				593AD29F2943DBC1006595CC /* LaunchScreen.storyboard */,
 				593AD2A22943DBC1006595CC /* Info.plist */,
-				593AD29A2943DBC0006595CC /* MediaManager.xcdatamodeld */,
 			);
-			path = MediaManager;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		593AD2AA2943DBEB006595CC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				593AD2972943DBC0006595CC /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		593AD2AB2943DBF3006595CC /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		593AD2AC2943DC0B006595CC /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				593AD2B22943E24D006595CC /* MediaItemController.swift */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,9 +188,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				593AD29C2943DBC0006595CC /* MediaManager.xcdatamodeld in Sources */,
-				593AD2962943DBC0006595CC /* ViewController.swift in Sources */,
+				593AD2B32943E24D006595CC /* MediaItemController.swift in Sources */,
 				593AD2922943DBC0006595CC /* AppDelegate.swift in Sources */,
 				593AD2942943DBC0006595CC /* SceneDelegate.swift in Sources */,
+				593AD2AF2943E06C006595CC /* CoreDataStack.swift in Sources */,
+				593AD2B12943E0C8006595CC /* MediaItem+Convenience.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +341,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8H997XH52S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MediaManager/Info.plist;
+				INFOPLIST_FILE = MediaManager/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -321,7 +369,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8H997XH52S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MediaManager/Info.plist;
+				INFOPLIST_FILE = MediaManager/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
